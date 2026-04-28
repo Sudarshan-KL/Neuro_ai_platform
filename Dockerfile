@@ -47,17 +47,17 @@ RUN mkdir -p data saved_models logs
 RUN useradd -m -u 1000 neuro && chown -R neuro:neuro /app
 USER neuro
 
-# Expose API port
+# Expose a default port (not critical on Railway but ok to keep)
 EXPOSE 8000
 
-# Health check
+# Health check uses PORT env if present, else 8000 for local dev
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-    CMD curl -f http://localhost:8000/api/v1/health || exit 1
+  CMD curl -f http://localhost:${PORT:-8000}/api/v1/health || exit 1
 
-# Uvicorn with production settings
-CMD ["uvicorn", "app.main:app", \
-     "--host", "0.0.0.0", \
-     "--port", "8000", \
-     "--workers", "2", \
-     "--log-level", "info", \
-     "--access-log"]
+# Use Railway's PORT env var if set, fallback 8000 locally
+CMD ["sh", "-c", "uvicorn app.main:app \
+  --host 0.0.0.0 \
+  --port ${PORT:-8000} \
+  --workers 2 \
+  --log-level info \
+  --access-log"]
