@@ -1,0 +1,256 @@
+2026-04-20 14:49:38 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 14:50:28 | INFO | neuro-ai-platform.app.main:32 | Starting Neuro-AI Platform vv1
+2026-04-20 14:50:28 | WARNING | neuro-ai-platform.app.main:41 | No trained model found at C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt. Run `python scripts/train.py` first. The API will start but /predict_* endpoints will return 503.
+2026-04-20 14:56:53 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 14:57:02 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 14:57:05 | INFO | __main__:187 | ============================================================
+2026-04-20 14:57:05 | INFO | __main__:188 | Bonn Epilepsy-EEG Training Pipeline
+2026-04-20 14:57:05 | INFO | __main__:189 | ============================================================
+2026-04-20 14:57:05 | INFO | __main__:190 | Device      : cpu
+2026-04-20 14:57:05 | INFO | __main__:191 | Data dir    : C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\Epilepsy-EEG
+2026-04-20 14:57:05 | INFO | __main__:192 | Window size : 173 samples (~1.0 s)
+2026-04-20 14:57:05 | INFO | __main__:193 | Stride      : 87 samples
+2026-04-20 14:57:05 | INFO | __main__:194 | Channels    : 1
+2026-04-20 14:57:05 | INFO | app.main:32 | Starting Neuro-AI Platform vv1
+2026-04-20 14:57:05 | WARNING | app.main:41 | No trained model found at C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt. Run `python scripts/train.py` first. The API will start but /predict_* endpoints will return 503.
+2026-04-20 14:57:06 | INFO | ml.data_loader.bonn_loader:193 | Folder A | 100 files | label=BACKGROUND
+2026-04-20 14:57:06 | INFO | ml.data_loader.bonn_loader:193 | Folder B | 100 files | label=BACKGROUND
+2026-04-20 14:57:07 | INFO | ml.data_loader.bonn_loader:193 | Folder C | 100 files | label=BACKGROUND
+2026-04-20 14:57:08 | INFO | ml.data_loader.bonn_loader:193 | Folder D | 100 files | label=BACKGROUND
+2026-04-20 14:57:08 | INFO | ml.data_loader.bonn_loader:193 | Folder E | 100 files | label=SEIZURE
+2026-04-20 14:57:08 | INFO | ml.data_loader.bonn_loader:200 | Bonn dataset loaded | total=500 | seizure=100 | background=400 | folders={'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100}
+2026-04-20 14:57:08 | INFO | __main__:199 | Files per folder: {'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100}
+2026-04-20 14:57:08 | INFO | __main__:218 | Total windows : 23,000  |  seizure=4,600  background=18,400
+2026-04-20 14:57:09 | INFO | __main__:229 | Train windows : 18,400 | Test windows : 4,600
+2026-04-20 14:57:09 | INFO | __main__:249 | Model         : SeizureCNN | params=918,825
+2026-04-20 14:58:20 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 14:58:22 | INFO | __main__:187 | ============================================================
+2026-04-20 14:58:22 | INFO | __main__:188 | Bonn Epilepsy-EEG Training Pipeline
+2026-04-20 14:58:22 | INFO | __main__:189 | ============================================================
+2026-04-20 14:58:22 | INFO | __main__:190 | Device      : cpu
+2026-04-20 14:58:22 | INFO | __main__:191 | Data dir    : C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\Epilepsy-EEG
+2026-04-20 14:58:22 | INFO | __main__:192 | Window size : 173 samples (~1.0 s)
+2026-04-20 14:58:22 | INFO | __main__:193 | Stride      : 87 samples
+2026-04-20 14:58:22 | INFO | __main__:194 | Channels    : 1
+2026-04-20 14:58:23 | INFO | ml.data_loader.bonn_loader:193 | Folder A | 100 files | label=BACKGROUND
+2026-04-20 14:58:23 | INFO | ml.data_loader.bonn_loader:193 | Folder B | 100 files | label=BACKGROUND
+2026-04-20 14:58:24 | INFO | ml.data_loader.bonn_loader:193 | Folder C | 100 files | label=BACKGROUND
+2026-04-20 14:58:24 | INFO | ml.data_loader.bonn_loader:193 | Folder D | 100 files | label=BACKGROUND
+2026-04-20 14:58:25 | INFO | ml.data_loader.bonn_loader:193 | Folder E | 100 files | label=SEIZURE
+2026-04-20 14:58:25 | INFO | ml.data_loader.bonn_loader:200 | Bonn dataset loaded | total=500 | seizure=100 | background=400 | folders={'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100}
+2026-04-20 14:58:25 | INFO | __main__:199 | Files per folder: {'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100}
+2026-04-20 14:58:25 | INFO | __main__:218 | Total windows : 23,000  |  seizure=4,600  background=18,400
+2026-04-20 14:58:25 | INFO | __main__:229 | Train windows : 18,400 | Test windows : 4,600
+2026-04-20 14:58:26 | INFO | __main__:249 | Model         : SeizureCNN | params=918,825
+2026-04-20 14:58:38 | INFO | __main__:263 | 
+ Epoch   TrainLoss    TrainAcc     ValLoss      ValAcc      ValAUC
+2026-04-20 14:58:38 | INFO | __main__:265 | --------------------------------------------------------------
+2026-04-20 15:03:39 | INFO | __main__:272 |      1      0.1106      0.9608      0.0971      0.9711      0.9981
+2026-04-20 15:03:39 | INFO | __main__:278 |   ✓ New best AUC: 0.9981 (epoch 1)
+2026-04-20 15:08:13 | INFO | __main__:272 |      2      0.0550      0.9804      0.1682      0.9598      0.9986
+2026-04-20 15:08:13 | INFO | __main__:278 |   ✓ New best AUC: 0.9986 (epoch 2)
+2026-04-20 15:13:47 | INFO | __main__:272 |      3      0.0406      0.9866      0.1058      0.9750      0.9993
+2026-04-20 15:13:47 | INFO | __main__:278 |   ✓ New best AUC: 0.9993 (epoch 3)
+2026-04-20 15:16:54 | INFO | __main__:272 |      4      0.0365      0.9879      0.2001      0.9600      0.9990
+2026-04-20 15:18:40 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:18:41 | INFO | __main__:187 | ============================================================
+2026-04-20 15:18:41 | INFO | __main__:188 | Bonn Epilepsy-EEG Training Pipeline
+2026-04-20 15:18:41 | INFO | __main__:189 | ============================================================
+2026-04-20 15:18:41 | INFO | __main__:190 | Device      : cpu
+2026-04-20 15:18:41 | INFO | __main__:191 | Data dir    : C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\Epilepsy-EEG
+2026-04-20 15:18:41 | INFO | __main__:192 | Window size : 173 samples (~1.0 s)
+2026-04-20 15:18:41 | INFO | __main__:193 | Stride      : 87 samples
+2026-04-20 15:18:41 | INFO | __main__:194 | Channels    : 1
+2026-04-20 15:18:41 | INFO | ml.data_loader.bonn_loader:193 | Folder A | 100 files | label=BACKGROUND
+2026-04-20 15:18:41 | INFO | ml.data_loader.bonn_loader:193 | Folder B | 100 files | label=BACKGROUND
+2026-04-20 15:18:42 | INFO | ml.data_loader.bonn_loader:193 | Folder C | 100 files | label=BACKGROUND
+2026-04-20 15:18:42 | INFO | ml.data_loader.bonn_loader:193 | Folder D | 100 files | label=BACKGROUND
+2026-04-20 15:18:42 | INFO | ml.data_loader.bonn_loader:193 | Folder E | 100 files | label=SEIZURE
+2026-04-20 15:18:42 | INFO | ml.data_loader.bonn_loader:200 | Bonn dataset loaded | total=500 | seizure=100 | background=400 | folders={'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100}
+2026-04-20 15:18:42 | INFO | __main__:199 | Files per folder: {'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100}
+2026-04-20 15:18:42 | INFO | __main__:218 | Total windows : 23,000  |  seizure=4,600  background=18,400
+2026-04-20 15:18:42 | INFO | __main__:229 | Train windows : 18,400 | Test windows : 4,600
+2026-04-20 15:18:42 | INFO | __main__:249 | Model         : SeizureCNN | params=918,825
+2026-04-20 15:18:44 | INFO | __main__:263 | 
+ Epoch   TrainLoss    TrainAcc     ValLoss      ValAcc      ValAUC
+2026-04-20 15:18:44 | INFO | __main__:265 | --------------------------------------------------------------
+2026-04-20 15:21:30 | INFO | __main__:272 |      1      0.1435      0.9571      0.0727      0.9776      0.9982
+2026-04-20 15:21:30 | INFO | __main__:278 |   ✓ New best AUC: 0.9982 (epoch 1)
+2026-04-20 15:24:11 | INFO | __main__:272 |      2      0.0532      0.9803      0.1316      0.9663      0.9988
+2026-04-20 15:24:11 | INFO | __main__:278 |   ✓ New best AUC: 0.9988 (epoch 2)
+2026-04-20 15:24:11 | INFO | __main__:281 | 
+Loading best checkpoint (AUC=0.9988)…
+2026-04-20 15:24:21 | INFO | __main__:287 | 
+Classification Report:
+              precision    recall  f1-score   support
+
+  Background       0.96      1.00      0.98      3680
+     Seizure       0.99      0.84      0.91       920
+
+    accuracy                           0.97      4600
+   macro avg       0.98      0.92      0.94      4600
+weighted avg       0.97      0.97      0.97      4600
+
+2026-04-20 15:24:21 | INFO | __main__:290 | Confusion Matrix:
+[[3674    6]
+ [ 149  771]]
+2026-04-20 15:24:21 | INFO | __main__:291 | ROC-AUC: 0.9988
+2026-04-20 15:24:21 | INFO | __main__:321 | 
+Model saved → C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 15:24:21 | INFO | __main__:322 | Done. Best validation AUC = 0.9988
+2026-04-20 15:24:46 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:24:51 | INFO | app.main:32 | Starting Neuro-AI Platform vv1
+2026-04-20 15:25:16 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:25:21 | INFO | app.main:32 | Starting Neuro-AI Platform vv1
+2026-04-20 15:25:21 | INFO | app.models.model_registry:62 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 15:25:21 | INFO | app.main:39 | Model loaded successfully. Inference service ready.
+2026-04-20 15:38:22 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:38:27 | INFO | app.main:33 | Starting Neuro-AI Platform vv1
+2026-04-20 15:38:27 | INFO | app.models.model_registry:62 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 15:38:27 | INFO | app.main:40 | Model loaded successfully. Inference service ready.
+2026-04-20 15:39:16 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:39:20 | INFO | app.main:33 | Starting Neuro-AI Platform vv1
+2026-04-20 15:39:20 | INFO | app.models.model_registry:62 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 15:39:20 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+2026-04-20 15:39:32 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9989 | threshold=0.50 | ts=1776679772.95
+2026-04-20 15:39:32 | INFO | app.services.inference:198 | predict_window | shape=(1, 173) | prob=0.9989 | status=ALERT
+2026-04-20 15:40:16 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:40:21 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-20 15:40:21 | INFO | app.models.model_registry:62 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 15:40:21 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+2026-04-20 15:40:39 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9989 | threshold=0.50 | ts=1776679839.78
+2026-04-20 15:40:39 | INFO | app.services.inference:198 | predict_window | shape=(1, 173) | prob=0.9989 | status=ALERT
+2026-04-20 15:40:48 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9989 | threshold=0.50 | ts=1776679848.53
+2026-04-20 15:40:48 | INFO | app.services.inference:198 | predict_window | shape=(1, 173) | prob=0.9989 | status=ALERT
+2026-04-20 15:41:36 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:41:41 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-20 15:41:41 | INFO | app.models.model_registry:62 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 15:41:41 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+2026-04-20 15:41:55 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9989 | threshold=0.50 | ts=1776679915.17
+2026-04-20 15:41:55 | INFO | app.services.inference:218 | predict_window | shape=(1, 173) | prob=0.9989 | status=ALERT
+2026-04-20 15:42:55 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmpap43pz6p.edf
+2026-04-20 15:43:23 | INFO | ml.data_loader.edf_loader:202 | Loaded tmpap43pz6p.edf | channels=23 | samples=921600 | duration=3600.0s | seizures=0
+2026-04-20 15:43:23 | INFO | ml.preprocessing.windowing:115 | Segmented tmpap43pz6p.edf → 7199 windows | seizure=0 (0.00%) | background=7199
+2026-04-20 15:45:10 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:45:14 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-20 15:45:14 | INFO | app.models.model_registry:67 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 15:45:14 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+2026-04-20 15:46:53 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmpdk6x9c75.edf
+2026-04-20 15:47:03 | INFO | ml.data_loader.edf_loader:202 | Loaded tmpdk6x9c75.edf | channels=23 | samples=921600 | duration=3600.0s | seizures=0
+2026-04-20 15:47:04 | INFO | ml.preprocessing.windowing:115 | Segmented tmpdk6x9c75.edf → 7199 windows | seizure=0 (0.00%) | background=7199
+2026-04-20 15:47:51 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 15:54:52 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmpl4mowlu2.edf
+2026-04-20 15:54:59 | INFO | ml.data_loader.edf_loader:202 | Loaded tmpl4mowlu2.edf | channels=23 | samples=921600 | duration=3600.0s | seizures=0
+2026-04-20 15:55:00 | INFO | ml.preprocessing.windowing:115 | Segmented tmpl4mowlu2.edf → 7199 windows | seizure=0 (0.00%) | background=7199
+2026-04-20 15:58:55 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmpz3nzrb2r.edf
+2026-04-20 15:59:00 | INFO | ml.data_loader.edf_loader:202 | Loaded tmpz3nzrb2r.edf | channels=23 | samples=921600 | duration=3600.0s | seizures=0
+2026-04-20 15:59:00 | INFO | ml.preprocessing.windowing:115 | Segmented tmpz3nzrb2r.edf → 7199 windows | seizure=0 (0.00%) | background=7199
+2026-04-20 16:37:34 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 16:37:46 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmpqb_8vo8t.edf
+2026-04-20 16:37:46 | INFO | ml.data_loader.edf_loader:175 | Resampling 173.6 Hz → 256 Hz
+2026-04-20 16:37:46 | INFO | ml.data_loader.edf_loader:202 | Loaded tmpqb_8vo8t.edf | channels=1 | samples=6400 | duration=25.0s | seizures=0
+2026-04-20 16:37:46 | INFO | ml.preprocessing.windowing:115 | Segmented tmpqb_8vo8t.edf → 49 windows | seizure=0 (0.00%) | background=49
+2026-04-20 16:37:49 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-20 16:37:49 | INFO | app.models.model_registry:67 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 16:37:49 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+2026-04-20 16:37:49 | INFO | app.main:55 | Shutting down Neuro-AI Platform.
+2026-04-20 16:37:58 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 16:38:03 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-20 16:38:03 | INFO | app.models.model_registry:67 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 16:38:03 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+2026-04-20 16:38:21 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmpmydhm1a4.edf
+2026-04-20 16:38:23 | INFO | ml.data_loader.edf_loader:202 | Loaded tmpmydhm1a4.edf | channels=1 | samples=4340 | duration=25.0s | seizures=0
+2026-04-20 16:38:23 | INFO | ml.preprocessing.windowing:115 | Segmented tmpmydhm1a4.edf → 48 windows | seizure=0 (0.00%) | background=48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9326 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9577 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5146 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9122 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9858 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9917 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9732 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9777 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9962 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9845 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8694 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5850 | threshold=0.50 | ts=1776683303.47
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8590 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9225 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9330 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9041 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9781 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8805 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8247 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9548 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8641 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8380 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9099 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9806 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9825 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8874 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8557 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9265 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9710 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8902 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5898 | threshold=0.50 | ts=1776683303.48
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.6733 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5894 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8027 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9335 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9556 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.6831 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9139 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9286 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9634 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9425 | threshold=0.50 | ts=1776683303.49
+2026-04-20 16:38:23 | INFO | app.services.inference:250 | predict_batch | n=48 | alerts=41 (85.4%)
+2026-04-20 16:39:51 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmp61mml6zb.edf
+2026-04-20 16:39:51 | INFO | ml.data_loader.edf_loader:202 | Loaded tmp61mml6zb.edf | channels=1 | samples=4340 | duration=25.0s | seizures=0
+2026-04-20 16:39:51 | INFO | ml.preprocessing.windowing:115 | Segmented tmp61mml6zb.edf → 48 windows | seizure=0 (0.00%) | background=48
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9326 | threshold=0.50 | ts=1776683392.67
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9577 | threshold=0.50 | ts=1776683392.67
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5146 | threshold=0.50 | ts=1776683392.68
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9122 | threshold=0.50 | ts=1776683392.68
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9858 | threshold=0.50 | ts=1776683392.69
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9917 | threshold=0.50 | ts=1776683392.70
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9732 | threshold=0.50 | ts=1776683392.71
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9777 | threshold=0.50 | ts=1776683392.71
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9962 | threshold=0.50 | ts=1776683392.72
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9845 | threshold=0.50 | ts=1776683392.72
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8694 | threshold=0.50 | ts=1776683392.73
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5850 | threshold=0.50 | ts=1776683392.73
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8590 | threshold=0.50 | ts=1776683392.74
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9225 | threshold=0.50 | ts=1776683392.75
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9330 | threshold=0.50 | ts=1776683392.76
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9041 | threshold=0.50 | ts=1776683392.77
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9781 | threshold=0.50 | ts=1776683392.77
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8805 | threshold=0.50 | ts=1776683392.78
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8247 | threshold=0.50 | ts=1776683392.79
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9548 | threshold=0.50 | ts=1776683392.80
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8641 | threshold=0.50 | ts=1776683392.81
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8380 | threshold=0.50 | ts=1776683392.81
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9099 | threshold=0.50 | ts=1776683392.82
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9806 | threshold=0.50 | ts=1776683392.82
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9825 | threshold=0.50 | ts=1776683392.83
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8874 | threshold=0.50 | ts=1776683392.83
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8557 | threshold=0.50 | ts=1776683392.84
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9265 | threshold=0.50 | ts=1776683392.85
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9710 | threshold=0.50 | ts=1776683392.86
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8902 | threshold=0.50 | ts=1776683392.86
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5898 | threshold=0.50 | ts=1776683392.87
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.6733 | threshold=0.50 | ts=1776683392.87
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5894 | threshold=0.50 | ts=1776683392.88
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8027 | threshold=0.50 | ts=1776683392.88
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9335 | threshold=0.50 | ts=1776683392.89
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9556 | threshold=0.50 | ts=1776683392.89
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.6831 | threshold=0.50 | ts=1776683392.90
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9139 | threshold=0.50 | ts=1776683392.90
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9286 | threshold=0.50 | ts=1776683392.91
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9634 | threshold=0.50 | ts=1776683392.91
+2026-04-20 16:39:52 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9425 | threshold=0.50 | ts=1776683392.91
+2026-04-20 16:39:52 | INFO | app.services.inference:250 | predict_batch | n=48 | alerts=41 (85.4%)
+2026-04-20 16:40:02 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9991 | threshold=0.50 | ts=1776683402.86
+2026-04-20 16:40:02 | INFO | app.services.inference:218 | predict_window | shape=(1, 173) | prob=0.9991 | status=ALERT
+2026-04-20 16:49:32 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-20 16:49:36 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-20 16:49:36 | INFO | app.models.model_registry:67 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 16:49:36 | INFO | app.main:44 | Model loaded successfully. Inference service ready.

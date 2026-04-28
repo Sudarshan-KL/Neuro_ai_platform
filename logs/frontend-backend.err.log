@@ -1,0 +1,13 @@
+2026-04-20 16:49:32 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+INFO:     Started server process [23704]
+INFO:     Waiting for application startup.
+2026-04-20 16:49:36 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-20 16:49:36 | INFO | app.models.model_registry:67 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-20 16:49:36 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FFCE920A3CD  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFCEB70E8D7  Unknown               Unknown  Unknown
+ntdll.dll          00007FFCEC5CC3FC  Unknown               Unknown  Unknown

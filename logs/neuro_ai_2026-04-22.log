@@ -1,0 +1,49 @@
+2026-04-22 10:22:29 | INFO | app.core.logging:44 | Logging initialised | level=INFO | log_dir=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\logs
+2026-04-22 10:22:44 | INFO | app.main:33 | Starting Neuro-AI Platform v1
+2026-04-22 10:22:45 | INFO | app.models.model_registry:67 | CNN model loaded | version=v1 | path=C:\Users\rajku\Downloads\neuro-ai-platform\neuro-ai-platform\saved_models\cnn_seizure_detector_v1.pt
+2026-04-22 10:22:45 | INFO | app.main:44 | Model loaded successfully. Inference service ready.
+2026-04-22 10:23:57 | INFO | ml.data_loader.edf_loader:169 | Loading EDF: tmpjqxj2bvn.edf
+2026-04-22 10:24:17 | INFO | ml.data_loader.edf_loader:202 | Loaded tmpjqxj2bvn.edf | channels=1 | samples=4340 | duration=25.0s | seizures=0
+2026-04-22 10:24:17 | INFO | ml.preprocessing.windowing:115 | Segmented tmpjqxj2bvn.edf → 48 windows | seizure=0 (0.00%) | background=48
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9326 | threshold=0.50 | ts=1776833658.52
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9577 | threshold=0.50 | ts=1776833658.52
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5146 | threshold=0.50 | ts=1776833658.53
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9122 | threshold=0.50 | ts=1776833658.53
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9858 | threshold=0.50 | ts=1776833658.54
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9917 | threshold=0.50 | ts=1776833658.54
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9732 | threshold=0.50 | ts=1776833658.55
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9777 | threshold=0.50 | ts=1776833658.55
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9962 | threshold=0.50 | ts=1776833658.55
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9845 | threshold=0.50 | ts=1776833658.56
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8694 | threshold=0.50 | ts=1776833658.57
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5850 | threshold=0.50 | ts=1776833658.57
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8590 | threshold=0.50 | ts=1776833658.58
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9225 | threshold=0.50 | ts=1776833658.58
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9330 | threshold=0.50 | ts=1776833658.59
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9041 | threshold=0.50 | ts=1776833658.59
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9781 | threshold=0.50 | ts=1776833658.60
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8805 | threshold=0.50 | ts=1776833658.60
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8247 | threshold=0.50 | ts=1776833658.61
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9548 | threshold=0.50 | ts=1776833658.61
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8641 | threshold=0.50 | ts=1776833658.62
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8380 | threshold=0.50 | ts=1776833658.62
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9099 | threshold=0.50 | ts=1776833658.63
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9806 | threshold=0.50 | ts=1776833658.63
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9825 | threshold=0.50 | ts=1776833658.63
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8874 | threshold=0.50 | ts=1776833658.64
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8557 | threshold=0.50 | ts=1776833658.64
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9265 | threshold=0.50 | ts=1776833658.65
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9710 | threshold=0.50 | ts=1776833658.65
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8902 | threshold=0.50 | ts=1776833658.66
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5898 | threshold=0.50 | ts=1776833658.67
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.6733 | threshold=0.50 | ts=1776833658.67
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.5894 | threshold=0.50 | ts=1776833658.68
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.8027 | threshold=0.50 | ts=1776833658.69
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9335 | threshold=0.50 | ts=1776833658.69
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9556 | threshold=0.50 | ts=1776833658.69
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.6831 | threshold=0.50 | ts=1776833658.70
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9139 | threshold=0.50 | ts=1776833658.70
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9286 | threshold=0.50 | ts=1776833658.71
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9634 | threshold=0.50 | ts=1776833658.71
+2026-04-22 10:24:18 | WARNING | app.services.inference:74 | 🚨 SEIZURE ALERT | confidence=0.9425 | threshold=0.50 | ts=1776833658.72
+2026-04-22 10:24:18 | INFO | app.services.inference:250 | predict_batch | n=48 | alerts=41 (85.4%)

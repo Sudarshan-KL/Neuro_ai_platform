@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuro-AI Command Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/ui/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow ambient-glow-a"></div>
+    <div class="ambient-glow ambient-glow-b"></div>
+    <div class="cursor-halo" id="cursorHalo"></div>
+
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-pulse"></div>
+        <div>
+          <p class="eyebrow">Neuro-AI Platform</p>
+          <h1>EEG Seizure Detection Console</h1>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <a class="ghost-button" href="/docs" target="_blank" rel="noreferrer">API Docs</a>
+        <a class="ghost-button" href="#prediction-lab">Inference Workbench</a>
+        <a class="primary-button" href="#live-operations">Operations</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Clinical Signal Analysis • Runtime Monitoring • Operational Review</p>
+          <h2>Operational console for EEG inference, model health, alert review, and EDF-based seizure analysis.</h2>
+          <p class="hero-text">
+            The platform combines model-serving APIs, model-aware validation, and a unified operator interface for
+            reviewing runtime status, testing inference behavior, and processing compatible EEG recordings against the
+            active deployment.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-button" id="refreshTelemetry" type="button">Refresh Telemetry</button>
+            <a class="ghost-button" href="#edf-upload">Open EDF Processing</a>
+          </div>
+
+          <div class="hero-metrics">
+            <article class="metric-card tilt-card">
+              <span class="metric-label">System Health</span>
+              <strong id="healthStatus">Checking...</strong>
+              <small id="healthDetail">Connecting to runtime</small>
+            </article>
+
+            <article class="metric-card tilt-card">
+              <span class="metric-label">Checkpoint Status</span>
+              <strong id="modelStatus">Scanning...</strong>
+              <small id="modelDetail">Loading deployment metadata</small>
+            </article>
+
+            <article class="metric-card tilt-card">
+              <span class="metric-label">Alert History</span>
+              <strong id="alertCountHero">0</strong>
+              <small id="alertDetailHero">No alerts recorded yet</small>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal">
+          <div class="brain-frame">
+            <div class="orbital-scene">
+              <div class="orbital-ring ring-a"></div>
+              <div class="orbital-ring ring-b"></div>
+              <div class="orbital-ring ring-c"></div>
+              <div class="neural-core">
+                <div class="neural-sphere"></div>
+                <div class="neural-grid"></div>
+                <div class="neural-scan"></div>
+              </div>
+              <div class="signal-column signal-column-a"></div>
+              <div class="signal-column signal-column-b"></div>
+              <div class="signal-column signal-column-c"></div>
+            </div>
+
+            <div class="stage-panel glass-panel">
+              <div class="section-heading compact">
+                <div>
+                  <p class="panel-tag">Signal Monitor</p>
+                  <h3>EEG Activity View</h3>
+                </div>
+                <strong class="inline-chip" id="serviceStatusBadge">Syncing</strong>
+              </div>
+
+              <svg class="waveform" viewBox="0 0 500 160" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,82 C28,62 42,34 62,46 C84,58 92,118 118,110 C146,102 150,40 176,38 C204,36 214,96 242,102 C268,108 284,56 310,58 C334,60 344,112 372,114 C400,116 422,72 446,70 C468,68 486,92 500,80"></path>
+              </svg>
+
+              <div class="signal-readout">
+                <span id="versionValue">Version pending</span>
+                <span id="deviceValue">Device pending</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="system-grid" id="live-operations">
+        <article class="glass-panel feature-card reveal tilt-card">
+          <p class="panel-tag">Deployment Architecture</p>
+          <h3>Unified application delivery through a single FastAPI service</h3>
+          <p>
+            The frontend and API are served from the same application boundary, simplifying deployment, health checks,
+            origin management, and operational maintenance.
+          </p>
+        </article>
+
+        <article class="glass-panel feature-card reveal tilt-card">
+          <p class="panel-tag">Operational Scope</p>
+          <h3>Inference testing, EDF intake, telemetry review, and alert monitoring</h3>
+          <p>
+            The interface is designed around real runtime tasks rather than presentation-only views.
+          </p>
+        </article>
+
+        <article class="glass-panel feature-card reveal tilt-card">
+          <p class="panel-tag">Interface System</p>
+          <h3>Motion-led visualization applied within a disciplined operational layout</h3>
+          <p>
+            Depth, motion, and signal-inspired visuals remain part of the product language without compromising clarity
+            in the working interface.
+          </p>
+        </article>
+      </section>
+
+      <section class="workspace-grid" id="prediction-lab">
+        <article class="glass-panel console-card reveal">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">Inference Workbench</p>
+              <h3>Single-Window Prediction</h3>
+            </div>
+            <button class="ghost-button compact-button" id="runPrediction" type="button">Run Prediction</button>
+          </div>
+
+          <p class="helper-copy">
+            Configure a synthetic single-channel EEG window for the active Bonn deployment and submit it to
+            <code>/api/v1/predict_window</code>.
+          </p>
+
+          <div class="control-grid">
+            <label class="control-field">
+              <span>Preset</span>
+              <select id="presetSelect">
+                <option value="calm">Baseline Rhythm</option>
+                <option value="spike">Spike Pattern</option>
+                <option value="ictal">Ictal Pattern</option>
+              </select>
+            </label>
+
+            <label class="control-field">
+              <span>Amplitude</span>
+              <input id="amplitudeInput" type="range" min="0.4" max="2.5" step="0.1" value="1.2">
+            </label>
+
+            <label class="control-field">
+              <span>Frequency</span>
+              <input id="frequencyInput" type="range" min="1" max="18" step="1" value="6">
+            </label>
+
+            <label class="control-field">
+              <span>Spike Intensity</span>
+              <input id="spikeInput" type="range" min="0" max="2" step="0.1" value="0.6">
+            </label>
+          </div>
+
+          <div class="hero-actions compact-actions">
+            <button class="ghost-button compact-button" id="generateSignal" type="button">Refresh Signal</button>
+            <button class="ghost-button compact-button" id="copyWindowJson" type="button">Copy Request Payload</button>
+          </div>
+
+          <svg class="waveform waveform-large" id="predictionWaveform" viewBox="0 0 600 180" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+          <div class="result-grid">
+            <article class="result-card">
+              <span>Last Status</span>
+              <strong id="predictionStatus">Not run</strong>
+            </article>
+            <article class="result-card">
+              <span>Confidence</span>
+              <strong id="predictionConfidence">--</strong>
+            </article>
+            <article class="result-card">
+              <span>Threshold</span>
+              <strong id="predictionThreshold">--</strong>
+            </article>
+          </div>
+
+          <div class="model-shape-banner" id="modelShapeBanner">
+            Active model input requirements pending.
+          </div>
+        </article>
+
+        <article class="glass-panel console-card reveal" id="edf-upload">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">EDF Processing</p>
+              <h3>Recording Upload And Analysis</h3>
+            </div>
+          </div>
+
+          <p class="helper-copy">
+            Upload an EDF recording for server-side parsing, segmentation, and inference against the active checkpoint.
+            File metadata is returned immediately, and resulting alerts are reflected in the monitoring panel.
+          </p>
+
+          <div class="upload-warning" id="uploadWarning">
+            Checking model compatibility...
+          </div>
+
+          <form id="uploadForm" class="upload-form">
+            <label class="upload-dropzone" for="edfFile">
+              <input id="edfFile" type="file" accept=".edf">
+              <span class="upload-title">Select an EDF recording</span>
+              <span class="upload-subtitle" id="selectedFileName">No file selected</span>
+            </label>
+            <button class="primary-button" type="submit">Process Recording</button>
+          </form>
+
+          <div class="upload-result" id="uploadResult">
+            <p class="helper-copy">No recording has been submitted.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="console-layout">
+        <article class="glass-panel console-card reveal">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">Monitoring</p>
+              <h3>Alert Review</h3>
+            </div>
+            <button class="ghost-button compact-button" id="refreshAlerts" type="button">Refresh Alerts</button>
+          </div>
+
+          <div class="status-stack telemetry-stack">
+            <div class="status-row">
+              <span>Available CNN Models</span>
+              <strong id="cnnVersions">Pending</strong>
+            </div>
+            <div class="status-row">
+              <span>Service Version</span>
+              <strong id="versionDetail">Pending</strong>
+            </div>
+          </div>
+
+          <div class="alerts-list" id="alertsList">
+            <div class="empty-state">No alerts yet.</div>
+          </div>
+        </article>
+
+        <article class="glass-panel console-card reveal">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">Processing Pipeline</p>
+              <h3>Inference Flow</h3>
+            </div>
+          </div>
+
+          <div class="layer-stack">
+            <div class="layer-item">
+              <span class="layer-index">01</span>
+              <div>
+                <h4>Data Intake</h4>
+                <p>Numerical windows and EDF recordings enter through the same validated inference boundary.</p>
+              </div>
+            </div>
+            <div class="layer-item">
+              <span class="layer-index">02</span>
+              <div>
+                <h4>Window Preparation</h4>
+                <p>Signals are aligned to the active model configuration before window-level scoring begins.</p>
+              </div>
+            </div>
+            <div class="layer-item">
+              <span class="layer-index">03</span>
+              <div>
+                <h4>Inference</h4>
+                <p>The deployed CNN produces seizure probabilities that are evaluated against the configured threshold.</p>
+              </div>
+            </div>
+            <div class="layer-item">
+              <span class="layer-index">04</span>
+              <div>
+                <h4>Operational Review</h4>
+                <p>Runtime health, alert history, and model compatibility remain visible within the same console.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="console-layout" id="disorder-hub">
+        <article class="glass-panel console-card reveal">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">Alzheimer's</p>
+              <h3>MRI Image Prediction</h3>
+            </div>
+          </div>
+          <form id="alzForm" class="upload-form">
+            <label class="upload-dropzone" for="alzFile">
+              <input id="alzFile" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp">
+              <span class="upload-title">Upload Alzheimer MRI image</span>
+              <span class="upload-subtitle" id="alzFileName">No file selected</span>
+            </label>
+            <button class="primary-button" type="submit">Predict Alzheimer's Class</button>
+          </form>
+          <div class="upload-result" id="alzResult"><p class="helper-copy">No prediction yet.</p></div>
+        </article>
+
+        <article class="glass-panel console-card reveal">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">Parkinson's</p>
+              <h3>Tabular Voice Feature Prediction</h3>
+            </div>
+          </div>
+          <p class="helper-copy">Paste JSON payload with feature columns from `Parkinsson disease.csv`.</p>
+          <textarea id="parkinsonPayload" rows="10" style="width:100%;background:rgba(255,255,255,0.04);color:#fff;border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:10px;">
+{"MDVP:Fo(Hz)":119.992,"MDVP:Fhi(Hz)":157.302,"MDVP:Flo(Hz)":74.997}
+          </textarea>
+          <div class="hero-actions compact-actions">
+            <button class="primary-button" id="predictParkinson" type="button">Predict Parkinson's</button>
+          </div>
+          <div class="upload-result" id="parkinsonResult"><p class="helper-copy">No prediction yet.</p></div>
+        </article>
+      </section>
+
+      <section class="console-layout">
+        <article class="glass-panel console-card reveal">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">Neuro / Brain Tumor</p>
+              <h3>Image Prediction</h3>
+            </div>
+          </div>
+          <form id="neuroForm" class="upload-form">
+            <label class="upload-dropzone" for="neuroFile">
+              <input id="neuroFile" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp">
+              <span class="upload-title">Upload neuro/brain image</span>
+              <span class="upload-subtitle" id="neuroFileName">No file selected</span>
+            </label>
+            <button class="primary-button" type="submit">Predict Neuro Class</button>
+          </form>
+          <div class="upload-result" id="neuroResult"><p class="helper-copy">No prediction yet.</p></div>
+        </article>
+
+        <article class="glass-panel console-card reveal">
+          <div class="section-heading">
+            <div>
+              <p class="panel-tag">Objectives Dashboard</p>
+              <h3>Coverage Across Disorders</h3>
+            </div>
+            <button class="ghost-button compact-button" id="refreshObjectives" type="button">Refresh</button>
+          </div>
+          <div class="status-stack telemetry-stack" id="objectivesSummary">
+            <div class="status-row"><span>Loading objective coverage...</span><strong>Pending</strong></div>
+          </div>
+          <div class="alerts-list" id="resultsList">
+            <div class="empty-state">No disorder predictions yet.</div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>
